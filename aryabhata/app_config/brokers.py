@@ -5,7 +5,7 @@ BROKERS = {
         "request_token_url": "https://kite.trade/connect/login?api_key=",
         "redirect_url": "",
         "region": "ap-south-1",
-        "login_timeout": "7",
+        "login_timeout": 7,
         "name": "zerodha"
     }
 }

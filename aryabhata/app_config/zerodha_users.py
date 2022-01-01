@@ -6,6 +6,7 @@ ZERODHA_USERS = {
         "pool": "",
         "proxies": "",
         "disable_ssl": False,
-        "enabled" : True
+        "enabled" : True,
+        "contact": ""
     }
 }

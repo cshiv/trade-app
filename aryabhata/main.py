@@ -6,19 +6,20 @@ To run the code in web app mode which in turn uses flask set the EXECUTION_METHO
 """
 
 from controller.webapp import *
-from  controller.multi_threader import *
+import controller.multi_threader as mt
 import logging
+
 
 # Accepted Values MULTI_THREADED_BACKEND | WEBAPP
 EXECUTION_METHOD="MULTI_THREAD_BACKEND"
 
 if __name__ == "__main__":
     if EXECUTION_METHOD == "MULTI_THREAD_BACKEND":
-        multi_thread()
+        mt.multi_thread()
     elif EXECUTION_METHOD == "WEBAPP":
         webapp()
     else:
-        logging.error("SetEXECUTION_METHOD to either MULTI_THREAD_BACKEND or WEBAPP ")
+        logging.error("Set EXECUTION_METHOD to either MULTI_THREAD_BACKEND or WEBAPP ")
         exit -1
 
 
