@@ -10,7 +10,7 @@ from  controller.multi_threader import *
 import logging
 
 # Accepted Values MULTI_THREADED_BACKEND | WEBAPP
-EXECUTION_METHOD=""
+EXECUTION_METHOD="MULTI_THREAD_BACKEND"
 
 if __name__ == "__main__":
     if EXECUTION_METHOD == "MULTI_THREAD_BACKEND":

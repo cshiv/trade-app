@@ -3,7 +3,7 @@ from kiteconnect import KiteConnect
 import requests
 import time
 from aws_ssm import AWSSSMUtils as aws_ssm
-import alpha.src.global_config.brokers as brokers
+import src.app_config.brokers as brokers
 
 
 class ZerodhaUser():
@@ -16,7 +16,7 @@ class ZerodhaUser():
     def __init__(self,user):
         self.zerodha_config = brokers.BROKERS["zerodha"]
         user_details=self.load_user_details(user)
-        logging.debug("Zerodha Broker config is %s", str(self.zerodha_config))
+        logging.debug("Zerodha Broker app_config is %s", str(self.zerodha_config))
         self.user = user_details["user"]
         self.password = user_details["password"]
         self.mfa = user_details["mfa"]
