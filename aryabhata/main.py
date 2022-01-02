@@ -13,7 +13,8 @@ import logging
 # Accepted Values MULTI_THREADED_BACKEND | WEBAPP
 EXECUTION_METHOD="MULTI_THREAD_BACKEND"
 
-if __name__ == "__main__":
+
+def main():
     if EXECUTION_METHOD == "MULTI_THREAD_BACKEND":
         mt.multi_thread()
     elif EXECUTION_METHOD == "WEBAPP":
@@ -21,3 +22,6 @@ if __name__ == "__main__":
     else:
         logging.error("Set EXECUTION_METHOD to either MULTI_THREAD_BACKEND or WEBAPP ")
         exit -1
+
+if __name__ == "__main__":
+    main()

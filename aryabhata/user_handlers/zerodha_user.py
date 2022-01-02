@@ -2,7 +2,7 @@ import logging
 from kiteconnect import KiteConnect
 import requests
 import time
-from aryabhata.controller.aws_ssm import AWSSSMUtils as aws_ssm
+from aryabhata.utils.aws_ssm import AWSSSMUtils as aws_ssm
 import aryabhata.app_config.brokers as brokers
 
 
