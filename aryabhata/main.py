@@ -21,5 +21,3 @@ if __name__ == "__main__":
     else:
         logging.error("Set EXECUTION_METHOD to either MULTI_THREAD_BACKEND or WEBAPP ")
         exit -1
-
-

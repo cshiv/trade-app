@@ -94,4 +94,3 @@ class ZerodhaUser():
 
     def get_access_token(self):
         return self.access_token
-

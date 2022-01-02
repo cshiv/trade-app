@@ -29,9 +29,3 @@ class AWSSSMUtils:
         except Exception as e:
             logging.error("Exception in putting SSM parameter %s with value %s",name,value)
             raise e
-
-
-
-
-
-
