@@ -15,6 +15,7 @@ class MultiThreadHandler:
     @classmethod
     def run_controller(cls):
         for user in usercfg.ZERODHA_USERS.keys():
-            MultiThreadHandler.controls[user] = Controller(user)
-            MultiThreadHandler.threads[user] = threading.Thread(target=MultiThreadHandler.controls[user].init_control)
-            MultiThreadHandler.threads[user].start()
+            if usercfg.ZERODHA_USERS[user]["enabled"]:
+                MultiThreadHandler.controls[user] = Controller(user)
+                MultiThreadHandler.threads[user] = threading.Thread(target=MultiThreadHandler.controls[user].init_control)
+                MultiThreadHandler.threads[user].start()
